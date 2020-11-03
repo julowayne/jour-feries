@@ -3,20 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Jour féries</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
 <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
 <script src="app.js" defer></script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   </head>
   <body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-8">
-
-    
-
+    <div class="container d-flex justify-content-center align-items-center p-4">
+        <div class="row justify-content-center align-items-center shadow-sm">
+            <div class="col-8 text-center">
+                <h1 class="mb-4">Est-ce que c'est férié aujourd'hui ?</h1>
+                <div id="today"></div>
+                <div class="card">
+                    <div class="card-body shadow-sm" id="next">
+                        Les prochains jours féries sont :
+                    </div>
+                  </div>
+                <button class="btn btn-primary mt-3 shadow-sm" id="display" onclick="display()">Afficher les jours féries</button>
+                <div id="list"></div>
             </div>
         </div>
     </div>
   </body>
 </html>
+<style>
+    body {
+        background-color: #F8F8F8;
+        padding: 0;
+    }
+    .row {
+        border: 1px solid lightgrey;
+        background-color: white;
+        height: 90vh;
+    }
+    #today {
+        font-weight: bold;
+    }
+</style>
